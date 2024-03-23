@@ -1,41 +1,17 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-
 const UseCurrencyInfo = (currency) => {
-    const [data,setData]=useState();
-    let url = ``
+  const [data, setData] = useState({});
+ 
 
-    useEffect(()=>{
-        fetch(url)
-        .then(response=>response.json())
-        .then(data=>setData(data))
-    },[])
-    
+  useEffect(() => {
+    fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
+      .then((response) => response.json())
+      .then((res) => setData(res[currency]));
+      console.log(data);
+  }, [currency]);
+  return data;
 };
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default UseCurrencyInfo;
