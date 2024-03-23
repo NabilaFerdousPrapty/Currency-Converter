@@ -9,7 +9,7 @@ function App() {
   return (
     <>
  
-      <div className='rounded-2xl' style={{backgroundImage:`url(${bg})`}}>
+      <div className='rounded-2xl bg-cover bg-no-repeat' style={{backgroundImage:`url(${bg})`}}>
         <Home/>
       </div>
     </>

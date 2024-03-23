@@ -1,36 +1,43 @@
 import img from "../assets/bg.jpg";
 
-
 export const Card = () => {
   return (
     <div className="">
-      <div className="card w-full glass">
+      <div className="card w-3/4 mx-auto glass">
         <figure>
-          <img className="w-2/6 rou" src={img} alt="car!" />
+          <img className="w-2/6 rounded-2xl" src={img} alt="car!" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title justify-center">Currency Converter</h2>
-          <p>How to park your car at your garage?</p>
-          <div className="flex justify-between items-center">
-            <select className="select select-info w-full max-w-xs">
-              <option disabled selected>
-                Select language
-              </option>
-              <option>English</option>
-              <option>Japanese</option>
-              <option>Italian</option>
-            </select>
-            <select className="select select-info w-full max-w-xs">
-              <option disabled selected>
-                Select language
-              </option>
-              <option>English</option>
-              <option>Japanese</option>
-              <option>Italian</option>
-            </select>
+          <h2 className="card-title justify-center p-0 text-blue-600">Currency Converter</h2>
+
+          <div className="flex flex-col justify-between items-center">
+            <label className="form-control w-full">
+              <div className="label">
+                <span className="label-text text-emerald-900">
+                  From
+                </span>
+              </div>
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-bordered w-full h-16"
+              />
+            </label>
+            <label className="form-control w-full">
+              <div className="label">
+                <span className="label-text text-emerald-900">
+                  To
+                </span>
+              </div>
+              <input
+                type="text"
+                placeholder="Type here"
+                className="input input-bordered w-full h-16"
+              />
+            </label>
           </div>
-          <div className="card-actions items-center justify-center py-6">
-            <button className="btn btn-primary">Learn now!</button>
+          <div className="card-actions items-center justify-center py-3">
+            <button className="btn btn-primary">Convert now!</button>
           </div>
         </div>
       </div>
